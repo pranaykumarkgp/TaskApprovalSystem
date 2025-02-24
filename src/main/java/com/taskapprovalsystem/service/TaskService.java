@@ -17,9 +17,17 @@ public class TaskService {
         this.taskRepository = taskRepository;
     }
 
-    public Task createTask(Task task) {
-        task.setStatus("Pending");
+    public Task createTask(Task task, String emailId) {
+
+        Task newTask = new Task();
+
+        newTask.setStatus("Pending");
+        newTask.setCreatorEmail(emailId);
+        newTask.setTitle(task.getTitle());
+        newTask.setDescription(task.getDescription());
+
         return taskRepository.save(task);
+
     }
 
     public List<Task> getAllTasks() {
