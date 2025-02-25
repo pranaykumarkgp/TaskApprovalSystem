@@ -26,7 +26,7 @@ public class TaskService {
         newTask.setTitle(task.getTitle());
         newTask.setDescription(task.getDescription());
 
-        return taskRepository.save(task);
+        return taskRepository.save(newTask);
 
     }
 
