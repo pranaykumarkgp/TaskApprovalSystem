@@ -25,7 +25,7 @@ public class MailController {
     private final JavaMailSender mailSender;
 
     private final String userName = "pranaykumariitkgp@gmail.com";
-    private final String password = "Gmail@2810";
+    private final String password = "something";
 
     @Autowired
     public MailController(MailService mailService, JavaMailSender mailSender) {
